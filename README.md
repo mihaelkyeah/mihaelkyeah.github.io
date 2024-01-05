@@ -1,0 +1,2 @@
+# Francisco Hernández - Web Portfolio 2024
+Finally, yet another iteration of my portfolio, except this one will go straight to the point and feature a website gallery right from the get-go, and my academic and contact information will be shown in another dedicated page that is not the landing page.
