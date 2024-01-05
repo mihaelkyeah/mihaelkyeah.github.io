@@ -1,3 +1,7 @@
+ :root {
+    --footer-height: 4em;
+ }
+ 
  body {
     background-image: url('../img/backgrounds/rose-petals.svg');
     background-position: center;
@@ -7,4 +11,15 @@
 
  .half-transparent-pill-container {
     background: rgba(255,255,255,0.5);
+ }
+
+ .container-minus-footer {
+    min-height: calc(100vh - var(--footer-height))
+ }
+ .custom-footer {
+    height: var(--footer-height);
+    margin: 0;
+    padding: 1ch;
+    width: 100%;
+    bottom: 0;
  }
