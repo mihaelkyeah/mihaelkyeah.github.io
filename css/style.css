@@ -1,0 +1,10 @@
+ body {
+    background-image: url('../img/backgrounds/rose-petals.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 200%;
+ }
+
+ .half-transparent-pill-container {
+    background: rgba(255,255,255,0.5);
+ }
