@@ -2,12 +2,17 @@
    --footer-height: 5.75em;
 }
 
+html {
+   scroll-padding-top: 52px;
+}
+
 body {
    background-image: url('../img/backgrounds/rose-petals.svg');
    background-position: center;
    background-repeat: no-repeat;
    background-attachment: fixed;
    background-size: 200%;
+   scroll-behavior: smooth;
 }
 
 .half-transparent-pill-container {
@@ -15,7 +20,7 @@ body {
 }
 
 .container-minus-footer {
-   min-height: calc(100vh - var(--footer-height))
+   min-height: calc(100vh - var(--footer-height));
 }
 .custom-footer {
    height: var(--footer-height);
@@ -82,4 +87,39 @@ body {
 .link-unstyled, .link-unstyled:link, .link-unstyled:hover {
    color: inherit;
    text-decoration: inherit;
- }
+}
+
+#pseudo-navbar {
+   /* background: #B22233EE; */
+   overflow: hidden;
+}
+/* PSEUDO NAVBAR */
+.pseudo-nav-item {
+   transition: all linear 200ms;
+   background: #222222EE;
+}
+.pseudo-nav-item:hover {
+   background: #B22233EE;
+   /* font-weight: 600; */
+}
+.sticky {
+   position: fixed;
+   top: 0;
+   width: 100%;
+   z-index: 99;
+}
+
+.sticky + .under-navbar {
+   padding-top: 50px;
+}
+
+.work-card {
+   transition: all linear 200ms;
+   background: radial-gradient(rgba(255,255,255,0.375), rgba(255,255,255,0.125))
+}
+.work-card .card-body {
+   background: rgba(255,255,255,0.5)
+}
+.work-card:hover {
+   transform: scale(1.0125)
+}
