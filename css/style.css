@@ -11,7 +11,7 @@ body {
    background-position: center;
    background-repeat: no-repeat;
    background-attachment: fixed;
-   background-size: 200%;
+   background-size: 200vh;
    scroll-behavior: smooth;
 }
 
@@ -122,4 +122,10 @@ body {
 }
 .work-card:hover {
    transform: scale(1.0125)
+}
+
+@media screen and (max-height: 720px) {
+   body {
+      background-size: 200vw;
+   }
 }
