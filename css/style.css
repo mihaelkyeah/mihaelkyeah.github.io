@@ -4,10 +4,11 @@
 
 html {
    scroll-padding-top: 52px;
+   background-image: ;
 }
 
 body {
-   background-image: url('../img/backgrounds/rose-petals.svg');
+   background-image: url('../img/backgrounds/rose-petals.svg'), linear-gradient(to bottom, rgb(109,11,37) 0%, rgb(109,11,37) 49.999%, rgb(148,18,61) 50%, rgb(148,18,61) 100%);
    background-position: center;
    background-repeat: no-repeat;
    background-attachment: fixed;
@@ -124,7 +125,7 @@ body {
    transform: scale(1.0125)
 }
 
-@media screen and (max-height: 720px) {
+@media screen and (max-height: 720px), screen and (min-width: 960px) {
    body {
       background-size: 200vw;
    }
