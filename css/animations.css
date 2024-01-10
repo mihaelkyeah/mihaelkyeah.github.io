@@ -1,0 +1,63 @@
+:root {
+    --animation-duration: 200ms;
+    --animation-duration-slow: 500ms;
+    --animation-timing-function: ease-out;
+    --animation-distance: 2em;
+    --animation-distance-negative: -2em;
+}
+
+.animated {
+    animation-timing-function: var(--animation-timing-function);
+    animation-duration: var(--animation-duration)
+}
+.slow {
+    animation-duration: var(--animation-duration-slow) !important
+}
+.animation-paused { animation-play-state: paused }
+.animation-play { animation-play-state: running }
+
+.animated.appear-left { animation: appearLeft }
+.animated.appear-right { animation: appearRight }
+.animated.appear-down { animation: appearDown }
+.animated.appear-up { animation: appearUp }
+
+@keyframes appearLeft {
+    from {
+        transform: translateX(var(--animation-distance-negative));
+        opacity: 1%
+    }
+    to {
+        transform: translateX(0);
+        opacity: 100%
+    }
+}
+@keyframes appearRight {
+    from {
+        transform: translateX(var(--animation-distance));
+        opacity: 1%
+    }
+    to {
+        transform: translateX(0);
+        opacity: 100%
+    }
+}
+@keyframes appearDown {
+    from {
+        transform: translateY(var(--animation-distance-negative));
+        opacity: 1%
+    }
+    to {
+        transform: translateY(0);
+        opacity: 100%
+    }
+}
+@keyframes appearUp {
+    from {
+        transform: translateY(var(--animation-distance));
+        opacity: 1%
+    }
+    to {
+        transform: translateY(0);
+        opacity: 100%
+    }
+}
