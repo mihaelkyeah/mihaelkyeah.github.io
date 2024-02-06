@@ -5,6 +5,7 @@
 
 html {
    scroll-padding-top: 52px;
+   scroll-behavior: smooth !important;
 }
 
 body {
@@ -13,7 +14,7 @@ body {
    background-repeat: no-repeat;
    background-attachment: fixed;
    background-size: 200vh;
-   scroll-behavior: smooth;
+   scroll-behavior: smooth !important;
 }
 
 .half-transparent-pill-container {

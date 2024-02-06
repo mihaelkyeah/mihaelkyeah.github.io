@@ -1,0 +1,48 @@
+.coin:hover, .coin:active {
+    animation: coin 0.75s linear 0ms 1 forwards;
+    background-clip: content-box;
+}
+.delay-250ms {
+    animation-delay: 250ms;
+}
+.delay-500ms {
+    animation-delay: 500ms;
+}
+
+@keyframes coin {
+    0% {
+        transform: scaleX(1);
+        animation-timing-function: ease-in;
+        filter: drop-shadow(0px 0px var(--side));
+    }
+    25% {
+        transform: scaleX(0.15);
+        animation-timing-function: linear;
+        filter: drop-shadow(-15px 0px var(--side)) brightness(0.87);
+    }
+    25.001% {
+        transform: scaleX(0.07);
+        animation-timing-function: ease-out;
+        filter: drop-shadow(15px 0px var(--side)) brightness(0.87);
+    }
+    50% {
+        transform: scaleX(-1);
+        animation-timing-function: ease-in;
+        filter: drop-shadow(0px 0px #222) brightness(0.625);
+    }
+    75% {
+        transform: scaleX(-0.15);
+        animation-timing-function: linear;
+        filter: drop-shadow(-15px 0px var(--side)) brightness(0.87);
+    }
+    75.001% {
+        transform: scaleX(-0.07);
+        animation-timing-function: ease-out;
+        filter: drop-shadow(15px 0px var(--side)) brightness(0.87);
+    }
+    100% {
+        transform: scalex(1);
+        animation-timing-function: linear;
+        filter: drop-shadow(0px 0px var(--side));
+    }
+}
