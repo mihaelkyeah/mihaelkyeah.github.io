@@ -1,0 +1,140 @@
+:root {
+   --footer-height: 5.75em;
+   --mobile-breakpoint: 960px;
+}
+
+html {
+   scroll-padding-top: 52px;
+   scroll-behavior: smooth !important;
+}
+
+body {
+   background-image: url('../img/backgrounds/rose-petals.svg'), linear-gradient(to bottom, rgb(109,11,37) 0%, rgb(109,11,37) 49.999%, rgb(148,18,61) 50%, rgb(148,18,61) 100%);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: 200vh;
+   scroll-behavior: smooth !important;
+}
+
+.half-transparent-pill-container {
+   background: rgba(255,255,255,0.25);
+}
+
+.container-minus-footer {
+   min-height: calc(100vh - var(--footer-height));
+}
+.custom-footer {
+   height: var(--footer-height);
+   margin: 0;
+   padding: 1ch;
+   width: 100%;
+   bottom: 0;
+}
+.gradient-1 {
+   background-image: linear-gradient(115deg, rgba(255,255,255,0.125), rgba(0,0,0,0.125))
+}
+.gradient-2 {
+   background-image: linear-gradient(345deg, rgba(255,255,255,0.125), rgba(0,0,0,0.125))
+}
+.drop-shadow-light {
+   filter: drop-shadow(#FFFFFF77 0px 0px 5px);
+}
+.drop-shadow-dark {
+   filter: drop-shadow(#111111AA 0px 0px 6px);
+}
+.world-background {
+   position: relative;
+   text-shadow: #111111CC 1px 1px 3px;
+   background: rgba(0,0,0,0.07)
+}
+.world-background-underlay {
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   background-image: url('../img/backgrounds/Simple_world_map.svg');
+   background-size: 100vw;
+   background-position: center;
+   opacity: 12.5%;
+   z-index: -1;
+   filter: blur(0.05rem);
+}
+
+/* === PUSHABLE 3D BUTTON COURTESY OF === */
+/* https://www.joshwcomeau.com/animation/3d-button/ */
+
+.btn3d-pushable {
+   /* background: hsl(340deg 100% 32%); */
+   border: none;
+   border-radius: 12px;
+   padding: 0;
+   cursor: pointer;
+   outline-offset: 4px;
+}
+.btn3d-front {
+   display: block;
+   padding: 12px 42px;
+   border-radius: 12px;
+   font-size: 1.25rem;
+   /* background: hsl(345deg 100% 47%); */
+   /* color: white; */
+   transform: translateY(-6px);
+}
+.btn3d-pushable:active .btn3d-front {
+   transform: translateY(-2px);
+}
+
+/* === UNSTYLED LINK HELPER THANKS TO === */
+/* https://stackoverflow.com/questions/22429881/how-to-unstyle-anchor-when-using-bootstrap */
+.link-unstyled, .link-unstyled:link, .link-unstyled:hover {
+   color: inherit;
+   text-decoration: inherit;
+}
+
+#pseudo-navbar {
+   /* background: #B22233EE; */
+   overflow: hidden;
+}
+/* PSEUDO NAVBAR */
+.pseudo-nav-item {
+   transition: all linear 200ms;
+   background: #222222EE;
+}
+.pseudo-nav-item:hover {
+   background: #B22233EE;
+   /* font-weight: 600; */
+}
+.sticky {
+   position: fixed;
+   top: 0;
+   width: 100%;
+   z-index: 99;
+}
+
+.sticky + .under-navbar {
+   padding-top: 50px;
+}
+
+.work-card {
+   transition: all linear 200ms;
+   background: radial-gradient(rgba(255,255,255,0.375), rgba(255,255,255,0.125))
+}
+.work-card .card-body {
+   background: rgba(255,255,255,0.5)
+}
+.work-card:hover {
+   transform: scale(1.0125)
+}
+
+@media screen and (max-height: 720px), screen and (min-width: 960px) {
+   body {
+      background-size: 200vw;
+   }
+}
+@media screen and (max-width: 700px) {
+   .btn3d-front {
+      padding: 1ch;
+      font-size: 12pt;
+      /* font-family: 'Comic Sans MS' !important; */
+   }
+}

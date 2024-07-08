@@ -1,0 +1,10 @@
+{
+    "languageDropdownHoverLabel": "Idioma",
+    "item1-title": "Desarrollador Web Full-Stack",
+    "item2-greeting": "¡Bienvenid@s!",
+    "item3-presentation-1": "Soy un desarrollador apasionado de las tecnologías web, principalmente enfocado en desarrollo en Laravel con TailwindCSS, rutas API y JavaScript vainilla para frontend asincrónico.",
+    "item3-presentation-2": "Actualmente estoy estudiando para un título de tecnicatura en desarrollo de aplicaciones informáticas en la universidad UNICEN de Lobería, Buenos Aires, Argentina, pero actualmente estoy transfiriéndome a la rama de Quequén por conveniencia de transporte, y estoy enfocado en revisar y reutilizar contenido previamente aprendido tanto en mi carrera como en mis trabajos, y también en construir mi portafolio virtual y hacer trabajos web freelance.",
+    "item3-presentation-3": "Tengo experiencia armando portafolios de negocios, aplicaciones de gestión administrativa y comercial, y tiendas online; puedo adaptarme a una amplia variedad de contextos y requerimientos dependiendo de las necesidades de su negocio.",
+    "item4-backend-tech": "Tecnologías Backend",
+    "item5-frontend-tech": "Tecnologías Frontend"
+}

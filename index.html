@@ -1,173 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<meta property="og:url"         content="https://mihaelkyeah.github.io" />
-    <meta property="og:title"       content="Francisco Hernández - Web Portfolio | Index" />
-    <meta property="og:description" content="A digital portfolio to showcase my skills and share my CV/résumé." />
-    <meta property="og:image"       content="https://mihaelkyeah.github.io/img/meta/link-preview.png" />
-
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
-	<link rel="stylesheet" href="css/utils.css">
-	<link rel="stylesheet" href="css/animations.css">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
-	<title>Francisco Hernández - Web Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Francisco Hernández | Web Portfolio</title>
+    <script src="./libs/tailwindcss/tailwindcss.3.4.4.js"></script>
+    <link rel="stylesheet" href="./libs/flowbite/flowbite.2.4.1.min.css">
+    <script src="./libs/flowbite/flowbite.2.4.1.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
 </head>
 <body>
-	<div class="container-minus-footer">
-		<!-- Main Heading -->
-		<div class="row mx-0 justify-content-center">
-			<div class="half-transparent-pill-container p-3 mt-3 rounded-4 w-75">
-				<div class="container row justify-content-around align-items-center g-0">
-					<div class="col-2 m-0 p-0 d-flex flex-column align-items-end justify-content-center">
-						<img src="img/vector-black-cat.png" class="img-fluid w-75">
-					</div>
-					<div class="col-6 m-0 p-0">
-						<h1 class="text-center text-white drop-shadow-dark fw-bold">Francisco Hernández</h1>
-						<h4 class="text-center text-white drop-shadow-dark fw-bold">Full-Stack Web Developer</h4>
-					</div>
-					<div class="col-2 m-0 p-0 d-flex flex-column align-items-start justify-content-center">
-						<img src="img/magic-wand-svgrepo-com.svg" class="img-fluid w-50">
-					</div>
-				</div>
-			</div>  
-		</div>
-		<!-- Navigation Buttons -->
-		<div class="row mt-4 mb-3 mx-0 justify-content-center">
-			<div class="btn3d-pushable w-25 mx-2 bg-primary bg-opacity-75">
-				<a href="cv-resume.html" class="text-decoration-none btn btn3d-front w-100 btn-primary"><i class="bi bi-eye-fill"></i>&nbsp;Virtual CV/Résumé</a>
-			</div>
-			<div class="btn3d-pushable w-25 mx-2 bg-primary bg-opacity-75">
-				<a href="docs/Francisco Hernández (EN) - Web Dev.pdf" download class="text-decoration-none btn btn3d-front w-100 btn-primary"><i class="bi bi-file-earmark-text-fill"></i>&nbsp;PDF CV/Résumé</a>
-			</div>
-		</div>
+    <!-- =====================================--LANGUAGE-PICKER--===================================== -->
 
-		<hr/>
+    <header class="flex flex-row justify-center items-center gap-x-2 sticky top-0 left-0 right-0 bg-slate-700 p-4 text-center z-10">
+        <span class="text-white" id="languageDropdownHoverLabel">Language</span>
+        <button id="languageDropdownHoverButton" data-dropdown-toggle="languageDropdownHover" data-dropdown-trigger="hover" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
+            <div id="languageDropdownHoverButton-pickedLanguage-english" class="languageDropdownHoverButton-pickedLanguage">
+                <span class="flex flex-row items-center gap-x-2"><img src="./img/icons/flag-for-flag-united-kingdom-svgrepo-com.svg" class="w-[32px]"> English</span>
+            </div>
+            <div hidden id="languageDropdownHoverButton-pickedLanguage-spanish" class="languageDropdownHoverButton-pickedLanguage">
+                <span class="flex flex-row items-center gap-x-2"><img src="./img/icons/flag-for-flag-spain-svgrepo-com.svg" class="w-[32px]"> Español</span>
+            </div>
+            <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+            </svg>
+        </button>
+            
+        <!-- Dropdown menu -->
+        <div id="languageDropdownHover" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="languageDropdownHoverButton">
+                <li>
+                    <a href="#" data-lang="en" data-span-show="languageDropdownHoverButton-pickedLanguage-english"
+                    class="languageDropdownHover-option
+                    flex flex-row gap-x-2 items-center p-1
+                    hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                        <img src="./img/icons/flag-for-flag-united-kingdom-svgrepo-com.svg" class="w-[32px]"> English
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-lang="es" data-span-show="languageDropdownHoverButton-pickedLanguage-spanish"
+                    class="languageDropdownHover-option
+                    flex flex-row gap-x-2 items-center p-1
+                    hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                        <img src="./img/icons/flag-for-flag-spain-svgrepo-com.svg" class="w-[32px]"> Español
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <script src="./js/languagePicker.js"></script>
 
-		<div class="container mt-3 mb-0">
-			<h3 class="text-center text-white fw-semibold">Production Websites I've Worked On</h3>
-			<p class="text-center text-white mb-0">Click on any of the cards below to visit each website.</p>
-		</div>
-		
-		<div class="row row-cols-1 row-cols-md-2 g-3 p-4 mx-0 justify-content-center">
-			<div class="col-md-4 col-sm-6 animated appear-left animation-paused">
-				<a href="https://i-marketplace.org/en" class="link-unstyled" target="_blank">
-					<div class="card">
-						<img src="thumbnails/i-marketplace-en.jpg" class="card-img-top" alt="...">
-						<div class="card-body">
-							<h5 class="card-title fw-bold text-decoration-underline">i-marketplace.org - Marketplace of Local Solutions</h5>
-							<p class="card-text">A space that connects local innovators with impact funds to collaboratively resolve the most urgent public challenges in the cities while putting focus on the people.</p>
-						</div>
-						<div class="card-footer">
-							<strong>Work done:</strong> complete website and CRUD admin panel for Product Owners.
-						</div>
-					</div>
-				</a>
-			</div>
-			<div class="col-md-4 col-sm-6 animated appear-right animation-paused">
-				<a href="https://redinnovacionlocal.org/en" class="link-unstyled" target="_blank">
-					<div class="card">
-						<img src="thumbnails/ril-es.jpg" class="card-img-top" alt="...">
-						<div class="card-body">
-							<h5 class="card-title fw-bold text-decoration-underline">RIL: Red de Innovación Local <small class="fs-6 fw-semibold">(Local Innovation Network)</small></h5>
-							<p class="card-text">A non-profit, civil association that works with local governments to enhance their management capabilities and thus maximize their power to transform their cities.</p>
-						</div>
-						<div class="card-footer">
-							<strong>Work done:</strong> first English website version, Cities and RIL Ambassadors subpages.
-						</div>
-					</div>
-				</a>
-			</div>
-		</div>
+    <!-- ============================================================================================= -->
 
-		<hr/>
+    <div class="w-full p-10 flex flex-row justify-around items-center">
+        <div
+        class="rounded rounded-[100%] p-4 h-[125px] w-[125px] flex flex-col justify-center items-center"
+        style="background-image: radial-gradient(#ffcc0011, #ffffff77);"
+        >
+            <img src="./img/vector-black-cat.png">
+        </div>
+        <div
+            class="bg-gradient-to-r from-slate-500/50 via-white/50 to-slate-500/50
+            rounded rounded-xl p-6
+            flex flex-col justify-center items-center
+            text-white
+            ">
+            <h1 class="text-[28pt] font-extrabold drop-shadow-[1px_1px_2px_#111111]">
+                Francisco Hernández
+            </h1>
+            <h2 id="item1-title" class="text-2xl font-bold drop-shadow-[1px_1px_2px_#111111]">
+                Full-stack Web Developer
+            </h2>
+        </div>
+        <div
+        class="rounded rounded-[100%] p-4 h-[125px] w-[125px] flex flex-col justify-center items-center"
+        style="background-image: radial-gradient(#ffcc0011, #ffffff77);"
+        >
+            <img src="./img/magic-wand-svgrepo-com.svg" class="w-[80%] h-[auto]">
+        </div>
+    </div>
+    <div class="p-2 text-white text-center space-y-2 drop-shadow-[1px_1px_#111]">
+        <h2 id="item2-greeting" class="text-3xl font-semibold italic text-center text-white">
+            Welcome!
+        </h2>
+        <p id="item3-presentation-1">
+            I am a developer who is passionate about web technologies, primarily focused on Laravel development with TailwindCSS, API routes and vanilla JavaScript for asynchronous frontend.
+        </p>
+        <p id="item3-presentation-2">
+            I am currently studying for an assistant's degree in application development at the UNICEN university in Lobería, Buenos Aires, Argentina, but currently transitioning to the branch in Quequén for ease of transport and focusing on revising and reusing previously learned knowledge from my career as well as my work experience, and also building my portfolio and doing freelance web development on the side.
+        </p>
+        <p id="item3-presentation-3">
+            I have experience building business portfolios, administrative and commercial management applications, and e-commerces; I can adapt to an ample variety of contexts and requirements depending on your business' needs.
+        </p>
+        <div class="py-6">
+            <hr/>
+        </div>
+        <div class="space-y-8">
+            <div>
+                <h2 id="item4-backend-tech" class="text-2xl font-bold underline mb-6">Backend Technologies</h2>
+                <div class="flex flex-row flex-wrap justify-around items-start gap-y-6">
+                    <div class="flex flex-col xl:w-1/5 lg:w-1/4 md:w-1/3 w-1/2 items-center">
+                        <img src="./img/logos/Official PHP Logo.svg" class="h-[64px]">
+                        <h3 class="text-xl font-bold">PHP</h3>
+                    </div>
+                    <div class="flex flex-col xl:w-1/5 lg:w-1/4 md:w-1/3 w-1/2 items-center">
+                        <img src="./img/logos/mysql-svgrepo-com.svg" class="h-[64px]">
+                        <h3 class="text-xl font-bold">MySQL</h3>
+                    </div>
+                    <div class="flex flex-col xl:w-1/5 lg:w-1/4 md:w-1/3 w-1/2 items-center">
+                        <img src="./img/logos/sqlite-svgrepo-com.svg" class="h-[64px]">
+                        <h3 class="text-xl font-bold">SQLite</h3>
+                    </div>
+                    <div class="flex flex-col xl:w-1/5 lg:w-1/4 md:w-1/3 w-1/2 items-center">
+                        <img src="./img/logos/laravel-logolockup-cmyk-red.svg" class="h-[64px]">
+                        <h3 class="text-xl font-bold">Laravel</h3>
+                    </div>
+                </div>
+            </div>
 
-		<div class="container mt-3 mb-0">
-			<h3 class="text-center text-white fw-semibold">Project Gallery</h3>
-			<p class="text-center text-white mb-0">Click on any of the cards below to visit each website on GitHub Pages.</p>
-		</div>
-
-		
-		<h4 class="text-white text-center my-4 fw-semibold">Small Projects</h4>
-		
-		<div class="row row-cols-1 row-cols-md-2 g-3 p-4 mx-0 justify-content-center">
-			<div class="col-md-3 col-sm-6">
-				<a href="https://mihaelkyeah.github.io/BudgetOrganizer_front/" class="link-unstyled" target="_blank">
-					<div class="card">
-						<img src="thumbnails/budget_organizer.png" class="card-img-top" alt="...">
-						<div class="card-body">
-							<h5 class="card-title fw-bold text-decoration-underline">Budget Organizer</h5>
-							<h6 class="card-title"><strong>Frontend:</strong> <span class="text-success">complete</span></h6>
-							<h6 class="card-title"><strong>Content:</strong> <span class="text-success">complete</span></h6>
-							<p class="card-text">This is a simple application to organize spendings. It includes several counters to keep track of your available cash and spendings sorted by item priority.<br/><br/></p>
-						</div>
-						<div class="card-footer"><a href="https://github.com/mihaelkyeah/BudgetOrganizer_front">GitHub repository</a></div>
-					</div>
-				</a>
-			</div>
-			<div class="col-md-3 col-sm-6">
-				<a href="https://mihaelkyeah.github.io/PersonList_front/" class="link-unstyled" target="_blank">
-					<div class="card">
-						<img src="thumbnails/person_list.png" class="card-img-top" alt="...">
-						<div class="card-body">
-							<h5 class="card-title fw-bold text-decoration-underline">Person Listing</h5>
-							<h6 class="card-title"><strong>Frontend:</strong> <span class="text-success">complete</span></h6>
-							<h6 class="card-title"><strong>Content:</strong> <span class="text-success">complete</span></h6>
-							<p class="card-text">This is a simple CRUD application. It's based on a simple JavaScript exercise from a Udemy course. I got enthusiastic with it before checking out the solution and I made my own version. :p</p>
-						</div>
-						<div class="card-footer"><a href="https://github.com/mihaelkyeah/PersonList_front">GitHub repository</a></div>
-					</div>
-				</a>
-			</div>
-		</div>
-
-		<h4 class="text-white text-center my-4 fw-semibold">Large Projects</h4>
-
-		<div class="row row-cols-1 row-cols-md-2 g-3 p-4 mx-0 justify-content-center">
-			<div class="col-md-3 col-sm-6">
-				<a href="https://mihaelkyeah.github.io/Eco-Computadoras/" class="link-unstyled" target="_blank">
-					<div class="card">
-						<img src="thumbnails/eco_computadoras.png" class="card-img-top" alt="...">
-						<div class="card-body">
-							<h5 class="card-title fw-bold text-decoration-underline">ECO Computer Store</h5>
-							<h6 class="card-title"><strong>Frontend:</strong> <span class="text-primary">in progress</span></h6>
-							<h6 class="card-title"><strong>Content:</strong> <span class="text-primary">in progress</span></h6>
-							<p class="card-text">A computer store in which users can buy computers and also apply for jobs. Forms will be updated soon. The images are <a href="https://stablediffusionweb.com/#ai-image-generator" target="_blank">AI-generated.</a></p>
-						</div>
-						<div class="card-footer"><a href="https://github.com/mihaelkyeah/Eco-Computadoras">GitHub repository</a></div>
-					</div>
-				</a>
-			</div>
-			<div class="col-md-3 col-sm-6">
-				<a href="https://mihaelkyeah.github.io/Accurate.ly_front/" class="link-unstyled" target="_blank">
-					<div class="card">
-						<img src="thumbnails/accurate.ly.png" class="card-img-top" alt="...">
-						<div class="card-body">
-							<h5 class="card-title fw-bold text-decoration-underline">Accurate.ly</h5>
-							<h6 class="card-title"><strong>Frontend:</strong> <span class="text-success">complete</span></h6>
-							<h6 class="card-title"><strong>Content:</strong> <span class="text-danger">under development</span></h6>
-							<p class="card-text">A statistics dashboard to measure the concurrency of customers to businesses, measuring gender and age through time.</p>
-						</div>
-						<div class="card-footer"><a href="https://github.com/mihaelkyeah/Accurate.ly_front">GitHub repository</a></div>
-					</div>
-				</a>
-			</div>
-			
-		</div>
-
-	</div>
-	
-	<footer class="custom-footer bg-dark">
-		<p class="text-white text-center m-0">Copyright © Francisco Hernández 2024.</p>
-		<p class="text-white text-center m-0"><small>Powered by <a href="https://getbootstrap.com" target="_blank">Bootstrap 5.</a></small></p>
-		<p class="text-white text-center m-0"><small>Background courtesy of <a href="https://www.svgbackgrounds.com/" target="_blank">SVG Backgrounds.</a></small></p>
-	</footer>
-	
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-	<script src="js/css-animations.js"></script>
+            <div>
+                <h2 id="item5-frontend-tech" class="text-2xl font-bold underline mb-6">Frontend Technologies</h2>
+                <div class="flex flex-row justify-around">
+                    <div class="w-1/3 flex flex-col items-center mb-6">
+                        <img src="./img/logos/HTML5 Logo.svg" class="w-[64px]">
+                        <h3 class="text-xl font-bold">HTML</h3>
+                    </div>
+                    <div class="w-1/3 flex flex-col items-center">
+                        <img src="./img/logos/CSS.3.svg" class="w-[64px]">
+                        <h3 class="text-xl font-bold">CSS</h3>
+                    </div>
+                    <div class="w-1/3 flex flex-col items-center">
+                        <img src="./img/logos/JavaScript.svg" class="w-[64px]">
+                        <h3 class="text-xl font-bold">JavaScript</h3>
+                    </div>
+                </div>
+                <div class="flex flex-row flex-wrap justify-around items-start  gap-y-6">
+                    <div class="flex flex-col xl:w-1/5 lg:w-1/4 md:w-1/3 w-1/2 items-center">
+                        <img src="./img/logos/blade-svgrepo-com.svg" class="h-[64px]">
+                        <h3 class="text-xl font-bold">Laravel Blade</h3>
+                    </div>
+                    <div class="flex flex-col xl:w-1/5 lg:w-1/4 md:w-1/3 w-1/2 items-center">
+                        <img src="./img/logos/bootstrap.svg" class="h-[64px]">
+                        <h3 class="text-xl font-bold">Bootstrap</h3>
+                    </div>
+                    <div class="flex flex-col xl:w-1/5 lg:w-1/4 md:w-1/3 w-1/2 items-center">
+                        <img src="./img/logos/Tailwind_CSS_Logo.svg" class="h-[64px]">
+                        <h3 class="text-xl font-bold">TailwindCSS</h3>
+                    </div>
+                    <div class="flex flex-col xl:w-1/5 lg:w-1/4 md:w-1/3 w-1/2 items-center">
+                        <img src="./img/logos/Flowbite-logo.svg" class="h-[64px]">
+                        <h3 class="text-xl font-bold">Flowbite</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h2 class="text-xl text-center font-bold italic p-6 mt-10 bg-slate-700 text-yellow-300" id="new-content-in-progress">New content in progress!</h2>
 </body>
 </html>

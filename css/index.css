@@ -1,0 +1,9 @@
+body {
+    /* min-width: 100vw;
+    min-height: 100vh; */
+    background-image: url('../img/backgrounds/slanted-gradient.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}

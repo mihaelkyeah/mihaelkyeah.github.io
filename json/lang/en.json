@@ -1,0 +1,10 @@
+{
+    "languageDropdownHoverLabel": "Language",
+    "item1-title": "Full-Stack Web Developer",
+    "item2-greeting": "Welcome!",
+    "item3-presentation-1": "I am a developer who is passionate about web technologies, primarily focused on Laravel development with TailwindCSS, API routes and vanilla JavaScript for asynchronous frontend.",
+    "item3-presentation-2": "I am currently studying for an assistant's degree in application development at the UNICEN university in Lobería, Buenos Aires, Argentina, but currently transitioning to the branch in Quequén for ease of transport and focusing on revising and reusing previously learned knowledge from my career as well as my work experience, and also building my portfolio and doing freelance web development on the side.",
+    "item3-presentation-3": "I have experience building business portfolios, administrative and commercial management applications, and e-commerces; I can adapt to an ample variety of contexts and requirements depending on your business' needs.",
+    "item4-backend-tech": "Backend Technologies",
+    "item5-frontend-tech": "Frontend Technologies"
+}
